@@ -1,0 +1,269 @@
+----------------------------------------------------EXEMPLO 1
+
+using System;
+
+namespace TESDASA
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+             int X,Y;
+
+       Console.WriteLine("Informe o valor de X");
+       X = Convert.ToInt32(Console.ReadLine());
+
+       Console.WriteLine("Informe o valor de Y");
+       Y = Convert.ToInt32(Console.ReadLine());
+
+       if (X > Y){
+           Console.WriteLine("X é maior que Y");          
+       }else{
+           Console.WriteLine("X é menor que Y");
+       }
+        
+        }
+    }
+}
+---------------------------------------------------------- EXEMPLO 2
+
+const int AnoCorrente = 2019;
+            int AnoNascimento;
+
+            Console.Clear();
+
+            Console.WriteLine("Digite o seu ano de nascimento");
+            AnoNascimento = Convert.ToInt16(Console.ReadLine());
+
+            if((AnoCorrente - AnoNascimento) >= 16 ){
+                Console.WriteLine("Você pode votar este ano.");
+            }
+            else{
+                Console.WriteLine("Você não pode votar este ano.");
+            } 
+
+-----------------------------------------------------------EXEMPLO 3
+using System;
+
+namespace TESDASA
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string senha;
+
+            Console.Clear();
+
+            Console.WriteLine("Digite sua senha: ");
+            senha = Console.ReadLine();
+
+            if(senha == "1010"){
+                Console.WriteLine("Entrada permitida, senha correta.");  
+            }
+            else{
+                Console.WriteLine("Entrada não permitida, senha inválida.");
+            }
+
+            
+
+
+        }
+    }
+}
+-------------------------------------------------------------------EXEMPLO 4
+            int maca;
+            double preco;
+
+            Console.Clear();
+            
+            Console.WriteLine("digite a quantidade de maçãs que deseja comprar: ");
+            maca = Convert.ToInt32(Console.ReadLine());
+
+            if (maca <= 12){
+                preco = (maca * 0.40);
+                Console.WriteLine("O preço total da sua compra foi R$: " + preco);
+            }
+            if (maca > 12){
+                preco = (maca * 0.30);
+                Console.WriteLine("O preço total da sua compra foi R$: " + preco);
+            }
+___________________________________________________________________________________________EXEMPLO 5
+           int valor1;
+           int valor2;
+           int valor3;
+
+            Console.WriteLine("Digite o primeiro valor: ");
+            valor1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Clear();
+
+            Console.WriteLine("Digite o segundo valor: ");
+            valor2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Clear();
+
+            Console.WriteLine("Digite o terceiro valor: ");
+            valor3 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Clear();
+
+                if(valor1 > valor2 && valor1 > valor3)
+                {
+                    Console.WriteLine("o valor " + valor1 + " é o maior. ");
+                }
+                else if(valor1 < valor2 && valor1 < valor3)
+                {
+                    Console.WriteLine("o valor " + valor1 + " é o menor. ");
+                }
+                else if(valor1 > valor2 && valor1 < valor3)
+                {
+                    Console.WriteLine("o valor " + valor1 + " é o medio. ");
+                }
+                else if(valor1 < valor2 && valor1 > valor3)
+                {
+                    Console.WriteLine("o valor " + valor1 + " é o medio. ");
+                }
+
+
+
+                    if(valor2 > valor1 && valor2 > valor3)
+                    {
+                        Console.WriteLine("o valor " + valor2 + " é o maior. ");
+                    }
+                    else if(valor2 < valor1 && valor2 < valor3)
+                    {
+                        Console.WriteLine("o valor " + valor2 + " é o menor. ");
+                    }
+                    else if(valor2 > valor1 && valor2 < valor3)
+                    {
+                        Console.WriteLine("o valor " + valor2 + " é o medio. ");
+                    }
+                    else if(valor2 < valor1 && valor2 > valor3)
+                    {
+                        Console.WriteLine("o valor " + valor2 + " é o medio. ");
+                    }
+
+
+                        if(valor3 > valor1 && valor3 > valor2)
+                        {
+                            Console.WriteLine("o valor " + valor3 + " é o maior. ");
+                        }
+                        else if(valor3 < valor1 && valor3 < valor2)
+                        {
+                            Console.WriteLine("o valor " + valor3 + " é o menor. ");
+                        }
+                        else if(valor3 > valor1 && valor3 < valor2)
+                        {
+                            Console.WriteLine("o valor " + valor3 + " é o medio. ");
+                        }
+                        else if(valor3 < valor1 && valor3 > valor2)
+                        {
+                            Console.WriteLine("o valor " + valor3 + " é o medio. ");
+                        }
+-----------------------------------------------------------------------------------------EXEMPLO 6
+            double Peso;
+            double Altura;
+            string sexo;
+            double IMC;
+
+            Console.Clear();
+
+            Console.WriteLine("Digite seu sexo: ");
+            sexo = Console.ReadLine();
+
+            Console.WriteLine("Digite seu peso: ");
+            Peso = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Digite sua altura: ");
+            Altura = Convert.ToDouble(Console.ReadLine());
+
+            Console.Clear();
+
+            switch (sexo){
+                case "homem":
+                    IMC = ((Peso * Altura) - 58);
+                    Console.WriteLine("Sexo: Masculino, e seu IMC é: " + IMC);
+                    break;
+                case "mulher":
+                    IMC = ((Peso * Altura) - 44.7);
+                    Console.WriteLine("Sexo: Feminino, e seu IMC é: " + IMC);
+                    break;
+                default:
+                    Console.WriteLine("Sexo não informado");
+                    break;
+            }
+----------------------------------------------------------------------------------------EXEMPLO 7
+                decimal lado1, lado2, lado3;
+
+                Console.WriteLine("Escreva o valor do primeiro lado: ");
+                lado1 = Convert.ToDecimal(Console.ReadLine());
+
+                Console.WriteLine("Escreva o valor do segundo lado: ");
+                lado2 = Convert.ToDecimal(Console.ReadLine());
+
+                Console.WriteLine("Escreva o valor do terceiro lado: ");
+                lado3 = Convert.ToDecimal(Console.ReadLine());
+
+                    if(lado1 == lado2 && lado1 == lado3 && lado2 == lado3){
+                        Console.WriteLine("Seu triângulo é equilátero.");
+                    }
+                    if(lado1 != lado2 && lado1 != lado3 && lado2 != lado3){
+                        Console.WriteLine("Seu triangulo é escaleno.");
+                    }
+                    else{
+                        Console.WriteLine("Seu triângulo é isosceles.");
+                    }
+-----------------------------------------------------------------------------------EXEMPLO 8
+
+          decimal nota1, nota2, nota3, nota4, mediatotal;
+
+            Console.Clear();
+
+                Console.WriteLine("Digite sua primeira nota: ");
+                nota1 = Convert.ToDecimal(Console.ReadLine());
+
+                Console.WriteLine("Digite sua segunda nota: ");
+                nota2 = Convert.ToDecimal(Console.ReadLine());
+
+                Console.WriteLine("Digite sua terceira nota: ");
+                nota3 = Convert.ToDecimal(Console.ReadLine());
+
+                Console.WriteLine("Digite sua quarta nota: ");
+                nota4 = Convert.ToDecimal(Console.ReadLine());
+
+                mediatotal = ((nota1 + nota2 + nota3 + nota4)/4);
+
+                if(mediatotal >= 5 && mediatotal < 7){
+                    Console.WriteLine("Sua média é: " + mediatotal + ", então, você está de exame.");
+                }
+                if(mediatotal < 5){
+                    Console.WriteLine("Sua média é: " + mediatotal + ", então, você está reprovado.");
+                }
+                if(mediatotal >= 7){
+                    Console.WriteLine("Sua média é: " + mediatotal + ", então, você está aprovado.");
+                }
+--------------------------------------------------------------------------------------------------------EXEMPLO 9
+           string Resposta;
+
+           Console.Clear();
+
+           Console.WriteLine("Qual é o valor de X nessa equação? 2x * 8 = 80");
+           Console.WriteLine("A) 1");
+           Console.WriteLine("B) 2");
+           Console.WriteLine("C) 3");
+           Console.WriteLine("D) 4");
+           Console.WriteLine("E) 5");
+
+           switch(Resposta)
+                {
+                    case "E":
+                        Console.WriteLine("Resposta correta");
+                        break;
+                    case "A":
+                        Console.WriteLine("Resposta incorreta");
+                        break;
+                    default:
+                        Console.WriteLine("Resposta incorreta");
+                        break;
+                }
