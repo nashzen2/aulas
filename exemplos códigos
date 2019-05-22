@@ -1,0 +1,182 @@
+1 CALCULADORA            
+            Console.Clear();
+
+            Console.WriteLine("Digite um número: ");
+            decimal _Numero1 = Convert.ToDecimal(Console.ReadLine());
+
+            Console.WriteLine("Digite outro número: ");
+            decimal _Numero2 = Convert.ToDecimal(Console.ReadLine());
+
+            Console.WriteLine("Digite a operação que deseja realizar: ");
+            string _Operacao = Console.ReadLine();
+                    
+            if (_Operacao == "+") {
+                Console.WriteLine(_Numero1 + _Numero2);
+            }if (_Operacao == "-") {
+                Console.WriteLine(_Numero1 - _Numero2);
+            }if (_Operacao == "*") {
+                Console.WriteLine(_Numero1 * _Numero2);
+            }if (_Operacao == "/") {
+                Console.WriteLine(_Numero1 / _Numero2);
+            }
+----------------------------------------------------------------------------------------------------------------
+2 CONVERSÃO CELSIUS PARA FAHRENHEIT
+            double C;
+            double D;
+            double B;
+            double F;
+            
+
+            Console.Clear();
+
+            Console.WriteLine("Digite a temperatura em graus Fahrenheit: ");
+            F = Convert.ToDouble(Console.ReadLine());
+
+            D=5;
+            B=9;
+            C= (D/B) * (F-32);
+
+            Console.WriteLine("Na conversão, " + F + " graus Fahrenheit resultam em " + C + " graus Celsius.");
+--------------------------------------------------------------------------------------------------------------------
+3  EQUAÇÃO 3 NUMEROS
+            double X;
+            double Y;
+            double T;
+            double W;
+            
+
+            Console.Clear();
+
+            Console.WriteLine("Digite o valor de T: ");
+            T = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Digite o valor de X: ");
+            X = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Digite o valor de Y: ");
+            Y = Convert.ToDouble(Console.ReadLine());
+
+            W = (2*T) + (4*X) - (3*Y);
+            Console.WriteLine("o valor de W é:" + W);
+---------------------------------------------------------------------------------------------------------------------------
+4 FÓRMULAS TRIANGULO
+
+            double CO;
+            double CA;
+            double hipotenusa;
+            double area;
+            double perimetro;
+
+            Console.Clear();
+
+            Console.WriteLine("digite o valor do cateto oposto: ");
+            CO = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("digite o valor do cateto adjacente: ");
+            CA = Convert.ToDouble(Console.ReadLine());
+
+            hipotenusa = Math.Sqrt((CO*CO) + (CA*CA));
+            Console.WriteLine("o valor da hipotenusa é: " + hipotenusa);
+
+            perimetro = (CO + CA + hipotenusa);
+            Console.WriteLine("O valor do perímetro é: " + perimetro);
+
+            area = ((CO * CA)/2);
+            Console.WriteLine("O valor da área é: " + area);
+--------------------------------------------------------------------------------------------------------------------------
+5 EXEMPLO DE UTILIZAÇÃO DE FUNÇÃO
+
+            String Nome;
+            String Sexo;
+            String Endereco;
+            String Cidade;
+            String Profissao;
+            String Email;
+            String DataNascimento;
+
+            Console.Clear();
+
+            Console.WriteLine("Digite seu nome:");
+            Nome = Console.ReadLine();
+
+            Console.WriteLine("Digite seu sexo:");
+            Sexo = Console.ReadLine();
+            
+            Console.WriteLine("Digite seu endereço:");
+            Endereco = Console.ReadLine();
+
+            Console.WriteLine("Digite sua cidade:");
+            Cidade = Console.ReadLine();
+
+            Console.WriteLine("Digite sua profissão:");
+            Profissao = Console.ReadLine();
+
+            Console.WriteLine("Digite seu e-mail:");
+            Email = Console.ReadLine();
+
+            Console.WriteLine("Digite sua data de nascimento:");
+            DataNascimento = Console.ReadLine();
+
+            Console.Clear();
+
+            CentralizaTexto(Nome, 10);
+            CentralizaTexto(Sexo, 11);  
+            CentralizaTexto(Endereco, 12);
+            CentralizaTexto(Cidade, 13);
+            CentralizaTexto(Profissao, 14);
+            CentralizaTexto(Email, 15);
+            CentralizaTexto(DataNascimento, 16);         
+        }
+
+        private static void CentralizaTexto(string _texto, int _linha){
+            int QtLetraTela = 112;
+            int QtLetraTexto = _texto.Length;
+            int PosicaoInicial = (QtLetraTela - QtLetraTexto) / 2;
+            Console.SetCursorPosition(PosicaoInicial, _linha);
+            Console.WriteLine(_texto);
+--------------------------------------------------------------------------------------------------------------
+6 VALOR MULTA
+
+            double multa;
+            double valorAserPago;
+            double PorcentagemMulta;
+            double ValorMulta;
+            
+
+            Console.Clear();
+
+            Console.WriteLine("Digite o valor a ser pago: ");
+            valorAserPago = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Digite a porcentagem da multa: ");
+            PorcentagemMulta = Convert.ToDouble(Console.ReadLine());
+
+            multa = ((valorAserPago * PorcentagemMulta)/100);
+
+            Console.WriteLine("O valor da multa é R$: "+ multa);
+
+            ValorMulta = (valorAserPago + multa);
+            Console.WriteLine("Então, o valor total da conta é R$: " + ValorMulta);
+---------------------------------------------------------------------------------------------------------------------
+7 PORCENTAGEM DE LUCRO
+
+            double lucro;
+            double precoVenda;
+            double Custo;
+            double PorcentagemLucro;
+            
+
+            Console.Clear();
+
+            Console.WriteLine("Digite o preço do produto: ");
+            precoVenda = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Digite o custo de produção do seu produto: ");
+            Custo = Convert.ToDouble(Console.ReadLine());
+
+            lucro = (precoVenda - Custo);
+            Console.WriteLine("O lucro obtido é de R$: " + lucro);
+
+            PorcentagemLucro = ((lucro/precoVenda)*100);
+            Console.WriteLine("Então, a porcentagem de lucro obtida é de: " + PorcentagemLucro + "%.");
+
