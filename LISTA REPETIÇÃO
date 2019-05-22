@@ -1,0 +1,155 @@
+LISTA 1
+---------------------------------------------------------------EXEMPLO1
+            int temp = 0;
+            int dia = 0;
+            int maior = 0;
+            int menor = 0;
+            int media = 0;
+            Random randNum = new Random();
+            
+            while(dia <= 30){
+                Console.WriteLine("Digite a temperatura do dia: " + temp);
+                dia++;
+                media = media + temp;
+                temp = randNum.Next(-40,15); //randomizador de números entre -40 e 15
+
+                if(temp < 0){
+                    menor = menor + 1;
+                }
+                if(temp > 0){
+                    maior = maior + 1;
+                }
+            }
+                
+
+                Console.WriteLine("Durante o mês, " + maior + " dias apresentaram temperatura maior que 0 graus.");
+                Console.WriteLine("Durante o mês, " + menor + " dias apresentaram temperatura menor que 0 graus.");
+                Console.WriteLine("A média das temperaturas é: " + media/30);
+
+        }
+    }
+}
+---------------------------------------------------------------------------------EXEMPLO2
+            Random randNum = new Random ();
+            int Vendas = 0;
+            int Dias = 1;
+            int MaiorVenda = 0;
+            int DiaMaiorVenda = 0;
+
+            Console.Clear();
+
+            while(Dias <= 30){
+                Console.WriteLine("No dia " + Dias + ", foram vendidos " + Vendas + " sapatos.");
+                Dias++;
+                Vendas = randNum.Next(0, 100);
+
+                if(Vendas > MaiorVenda){
+                MaiorVenda = Vendas;
+                DiaMaiorVenda = Dias;
+                }               
+            }
+            
+
+            
+            Console.WriteLine("O dia de maior venda de calçados foi o dia " + DiaMaiorVenda);
+            
+ -------------------------------------------------------------------------------------------------EXEMPLO 3
+            Console.WriteLine("Digite um número para descobrir se é perfeito: ");
+            int numero = Convert.ToInt16(Console.ReadLine());
+
+            int soma = 0;
+            int i = 1;
+
+                while(i < numero)
+                {
+
+                    if(numero % i == 0)
+                    {                    
+                        soma = soma + i;
+                    }
+
+                    i = i + 1;
+                }
+                if (soma == numero){
+                    Console.WriteLine("o número é perfeito.");
+                }   
+                else{
+                    Console.WriteLine("o número não é perfeito.");
+                }
+      
+-------------------------------------------------------------------------------------------------EXEMPLO 4
+            double valor;
+            double juro;
+            double porcentagem = 0.035;
+            int mes = 0;
+            double montante;
+            double valorcomjuro;
+
+            Console.WriteLine("Digite o valor da sua aplicação inicial: ");
+            valor = Convert.ToDouble(Console.ReadLine());
+            montante=valor;
+
+            do{
+                mes++;
+                juro = valor * porcentagem;
+                montante = montante + juro;
+                valorcomjuro = montante * porcentagem;
+
+                Console.WriteLine("O rendimento no mês " + mes + " é de R$" + montante);
+                
+                
+                
+
+            }while(mes <= 12);
+----------------------------------------------------------------------------------------------EXEMPLO 6
+	    int contador = 0;
+            int numerador = -1;
+            int denominador = 1;
+            
+            float total = 0;
+
+            for(contador = 0; contador <= 50; contador++){
+ 
+                numerador = numerador + 2;
+                denominador = denominador + 1;
+
+                total = total + (numerador/denominador);
+            }
+
+                Console.WriteLine(total);
+___________________________--------------------------------------------------------------------exemplo 10
+
+	    double Y;
+
+            Console.Clear();
+            Console.WriteLine("Digite a população do país Y: ");
+            Y = Convert.ToDecimal(Console.ReadLine());
+
+            double X = (Y * 2);
+
+            double CrescimentoX = 0.03;
+            double CrescimentoY = 0.06;
+_______________________________________________________________________________________________
+LISTA 2
+_______________________________________________________________________________________________exemplo 1
+            Console.WriteLine("Informe um número de 1 a 10: ");
+            int numero = Convert.ToInt16(Console.ReadLine());
+            
+            int i = 0;
+            
+            while (i <= 10)
+            {
+                Console.WriteLine("Tabuada " + (numero * i));
+                i = i + 1;
+            }
+___________________________________________________________________________________________________exemplo 2
+            Console.WriteLine("Digite um número: ");
+            int numero = Convert.ToInt32(Console.ReadLine());
+
+            int fatorial = numero;
+            while(numero > 1)
+            {
+                fatorial = fatorial * (numero - 1);
+                numero = numero - 1;
+            }
+            Console.WriteLine("o fatorial de " + numero + " é: " + fatorial);
