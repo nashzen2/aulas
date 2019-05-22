@@ -1,0 +1,34 @@
+LISTA DE EXERCICIOS
+____________________________________________________________________________________________ EXERCICIO 1:
+            int[] Estoque = new int[10] {10, 10, 10, 12, 15, 18, 20, 22, 25, 30};
+            int[] PrecoCompra = new int[10] {10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
+            int[] ValorVenda = new int[10] {15 , 16 , 17, 18, 19, 20, 21, 22, 23, 24};
+
+            Random VendasDia = new Random();
+
+            int contador = 0;
+
+            Console.Clear();
+
+            while(contador < 10){
+                int QtdVendida = VendasDia.Next(1, 10);
+                Console.WriteLine("Hoje foram vendidos " + QtdVendida + " unidades do produto " + contador);
+                Console.WriteLine("Estoque atualizado da mercadoria " + contador + ": " +(Estoque[contador] - QtdVendida));
+                Console.WriteLine("O faturamento total da mercadoria " + contador + " é: " + (QtdVendida * (ValorVenda[contador] - PrecoCompra[contador])));
+                Console.WriteLine("------------------------");
+                contador++;
+            }
+            
+____-____________________________________________________________________________________________EXERCICIO 2:
+
+            int[] vetor = new int[20];
+
+            Random numero = new Random();
+            int contador = 0;
+
+            while(contador < 20)
+            {
+                vetor[contador] = numero.Next(1, 50);
+                Console.WriteLine("O valor do índice " + contador + " é igual a: " + vetor[contador]);
+                contador++;
+            }
