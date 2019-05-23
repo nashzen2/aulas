@@ -85,4 +85,36 @@ ____-___________________________________________________________________________
             }
 
             Console.WriteLine("a soma total dos números é: " + soma);
+ --------------------------------------------------------------------------------------------------EXERCICIO 3
+            Console.WriteLine("Informe o tamanho do vetor: ");
+            int tamanho = Convert.ToInt16(Console.ReadLine());
+
+            int[] vetor = new int[tamanho];
+            Random numeros = new Random();
+
+            int indice = 0;
+            int MaiorElemento = 0;
+            int MenorElemento = 200;
+
+            while(indice < tamanho)
+            {
+                vetor[indice] = numeros.Next(1,20);
+
+                Console.WriteLine("Valor do número no índice " + indice + ": " + vetor[indice]);
+
+                    if(vetor[indice] > MaiorElemento)
+                    {
+                        MaiorElemento = vetor[indice];
+                    }
+                    if(vetor[indice] < MenorElemento)
+                    {
+                        MenorElemento = vetor[indice];
+                    }
+
+                    indice++;
+         
+            }       
+           
+            Console.WriteLine("O maior elemento desse vetor é: " + MaiorElemento);
+            Console.WriteLine("O menor elemento desse vetor é: " + MenorElemento);
             
