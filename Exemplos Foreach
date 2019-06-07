@@ -1,0 +1,20 @@
+   Exemplo de código com todas as funções:        
+           
+           List<int> lista = new List<int>(){10, 23, 12231, 94, 321, 2}; //lista definida com seus elementos  
+
+           foreach(int aux in lista){
+               Console.WriteLine(aux + " pratos de trigo para três tigres tristes");
+           }  // para cada variavel na lista, adicione
+
+           Console.WriteLine();
+
+           lista.Remove(23); //remove um numero da lista
+           lista.Add(754); //adiciona um numero da lista
+           lista.Sort(); //ordena os números da lista
+
+           foreach(int aux in lista){
+               Console.WriteLine(aux + " pratos de trigo para três tigres tristes");
+              
+           } 
+           Console.WriteLine();       
+           Console.WriteLine("A lista contém " + lista.Count + " elementos.");
