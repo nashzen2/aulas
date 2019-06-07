@@ -242,3 +242,21 @@ EXERCICIO 3:
                     Console.WriteLine("Numero encontrado na posicao " + posicao);
                 }
         
+_____________________________________________________________________________________________________
+EXERCICIO 4:
+
+                int[] vetor = new int[40];
+                Random rn = new Random();
+                int contador = 0;
+
+                for(contador=0;contador<=40;contador++){
+                    vetor[contador] = rn.Next(0,100);
+                    Console.WriteLine("número " + contador + ": " + vetor[contador]);
+                        if((vetor[contador] % 2) == 0 ){
+                            Console.WriteLine("número par");
+                        }
+                        else{
+                            Console.WriteLine("numero impar");
+                        }
+
+                }
