@@ -217,3 +217,28 @@ EXERCICIO 2:
                 Console.WriteLine("vetor invertido: " + vetor[i]);
             }
             
+______________________________________________________________________________________________________________
+
+EXERCICIO 3:
+                int[] vetor = new int[10] {0 , 1 , 2, 3, 4, 5, 6, 7 ,8 ,9};
+                int numeroSelecionado, contido=0, posicao=0 ;
+                //A variavel 'contido' vai verificar se achei o numero digitado.
+                
+                Console.WriteLine("Digite algum numero para descobrir se está contido no vetor: ");
+                numeroSelecionado = Convert.ToInt16(Console.ReadLine());
+                
+                for (int i=0;i<10;i++){
+                    if (vetor[i] == numeroSelecionado){
+                        contido = 1;
+                        posicao = i;
+                    }
+                }
+                    
+                
+                if (contido == 0){
+                    Console.WriteLine("Numero nao encontrado");
+                }
+                else{
+                    Console.WriteLine("Numero encontrado na posicao " + posicao);
+                }
+        
