@@ -18,3 +18,25 @@
            } 
            Console.WriteLine();       
            Console.WriteLine("A lista contém " + lista.Count + " elementos.");
+           
+________________________________________________________________________ LISTA DE EXERCICIOS
+
+exercicio1:
+
+            List<int> lista = new List<int>(){10, 15, 20, 25, 30, 35, 40, 45, 50};
+            int elementos;
+            int contador=0;
+
+            Console.WriteLine("Digite a quantidade de elementos que deseja na sua lista: ");
+            elementos = Convert.ToInt16(Console.ReadLine());
+
+            int [] vetor = new int[elementos]; //vetor para armazenamento dos elementos 
+
+            foreach(int auxiliar in lista){ //a variavel sempre analisa o primeiro numero da lista
+                if(contador == elementos){
+                    break;
+                }
+                vetor[contador] = auxiliar;
+                Console.WriteLine("Valor do indice" + contador +": " + vetor[contador]);
+                contador++;
+            }
