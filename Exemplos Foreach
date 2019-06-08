@@ -68,7 +68,20 @@ exercicio1:
                 if(numeroSelecionado == auxiliar){
                     validacao = true;
                     Console.WriteLine("Seu numero é: " + auxiliar + " e está contido na lista.");
-                }               
+                }  
+   ___________________________________________________________________________________________________
+  Exercicio 4:
+            List<int> lista = new List<int>(){10, 20, 30, 40, 50, 60, 70};
+
+            Console.WriteLine("Escreva um número para adicionar à lista: ");
+            int adicional = Convert.ToInt16(Console.ReadLine());
+
+            lista.Add(adicional);
+            lista.Sort();
+
+            foreach(int numero in lista){
+                Console.WriteLine("elemento: " + numero);
+            } 
             }
             if(validacao == false){
                     Console.WriteLine("Número não encontrado.");
