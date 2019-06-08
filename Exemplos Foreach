@@ -40,3 +40,37 @@ exercicio1:
                 Console.WriteLine("Valor do indice" + contador +": " + vetor[contador]);
                 contador++;
             }
+ ________________________________________________________________________________________________________
+ exercicio2:
+ 
+            List<float> lista = new List<float>(){-10, 15, -20, 25, -30, -35, 40, -45, 50, 55};
+            int contador = 0;
+
+            foreach(int auxiliar in lista){
+                if(auxiliar < 0){
+                    Console.WriteLine("0");
+                }
+                else{
+                    Console.WriteLine(auxiliar);
+                }
+ ______________________________________________________________________________________________________________
+ exercicio3:
+ 
+            List<float> lista = new List<float>(){-10, 15, -20, 25, -30, -35, 40, -45, 50, 55};
+            int numeroSelecionado;
+            bool validacao = false;
+
+            Console.WriteLine("Digite um número para verificar se ele está na lista: ");
+            numeroSelecionado = Convert.ToInt16(Console.ReadLine());
+
+
+            foreach(int auxiliar in lista){
+                if(numeroSelecionado == auxiliar){
+                    validacao = true;
+                    Console.WriteLine("Seu numero é: " + auxiliar + " e está contido na lista.");
+                }               
+            }
+            if(validacao == false){
+                    Console.WriteLine("Número não encontrado.");
+            }
+
